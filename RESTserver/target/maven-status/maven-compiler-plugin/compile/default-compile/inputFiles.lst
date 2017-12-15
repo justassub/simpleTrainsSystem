@@ -1,0 +1,12 @@
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/AppConfig.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Repositories/VagonasRepository.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Vagonai/CreateVagonasCommand.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Controllers/VagonasController.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Vagonai/Vagonas.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Services/VagonasServices.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/App.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Trains/Train.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Repositories/TrainRepository.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Trains/CreateTrainCommand.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Controllers/TrainController.java
+/home/justas/Desktop/TraukiniuSistema/RESTserver/src/main/java/lt/it/akademija/Services/TrainServices.java

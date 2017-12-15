@@ -1,0 +1,12 @@
+lt/it/akademija/Repositories/VagonasRepository.class
+lt/it/akademija/Repositories/TrainRepository.class
+lt/it/akademija/Controllers/VagonasController.class
+lt/it/akademija/Services/VagonasServices.class
+lt/it/akademija/Trains/Train.class
+lt/it/akademija/Trains/CreateTrainCommand.class
+lt/it/akademija/Services/TrainServices.class
+lt/it/akademija/App.class
+lt/it/akademija/Vagonai/CreateVagonasCommand.class
+lt/it/akademija/AppConfig.class
+lt/it/akademija/Controllers/TrainController.class
+lt/it/akademija/Vagonai/Vagonas.class
