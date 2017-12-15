@@ -34,7 +34,7 @@ export class Traukiantis extends React.Component{
             galia:this.state.galia      
     };
     
-    axios.post("http://localhost:8081/train-app/vagonai/add/lokomotyvas/traukiantis", outputTrain)
+    axios.post("http://localhost:8081/train-app/vagonai/"+this.props.match.params.id+"/add/lokomotyvas/traukiantis", outputTrain)
         .then((response) => {
             this.setState( {
                 gamintojas: '',

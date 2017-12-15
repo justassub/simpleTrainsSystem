@@ -25,7 +25,7 @@ public class VagonasServices {
     }
 //ADD bazinis vagonas
     @Transactional
-    public void addBazinisVagonas(int klase, @RequestBody CreateVagonasCommand cvc) {
+    public void addBazinisVagonas(Long id,int klase, @RequestBody CreateVagonasCommand cvc) {
         cvc.setTipas("bazinis");
         cvc.setKlase(klase);
         Vagonas newVagonas = new Vagonas(cvc.getTipas(), cvc.getGamintojas(), cvc.getKiekis(), cvc.getKaina(), cvc.getGalia(), cvc.getKlase(), cvc.getLokomotyvas(), cvc.getTuris());
@@ -33,14 +33,14 @@ public class VagonasServices {
     }
 //ADD KROVININIS VAGONAS
     @Transactional
-    public void addKrovininisVagonas( @RequestBody CreateVagonasCommand cvc) {
+    public void addKrovininisVagonas( Long id,@RequestBody CreateVagonasCommand cvc) {
         cvc.setTipas("krovininis");
         Vagonas newVagonas = new Vagonas(cvc.getTipas(), cvc.getGamintojas(), cvc.getKiekis(), cvc.getKaina(), cvc.getGalia(), cvc.getKlase(), cvc.getLokomotyvas(), cvc.getTuris());
         vagonasRepository.save(newVagonas);
     }
 
     @Transactional
-    public  void addLokomotyvas(String lokomotyvas, @RequestBody CreateVagonasCommand cvc){
+    public  void addLokomotyvas(Long id,String lokomotyvas, @RequestBody CreateVagonasCommand cvc){
         cvc.setTipas("lokomotyvas");
         cvc.setLokomotyvas(lokomotyvas);
         Vagonas newVagonas = new Vagonas(cvc.getTipas(), cvc.getGamintojas(), cvc.getKiekis(), cvc.getKaina(), cvc.getGalia(), cvc.getKlase(), cvc.getLokomotyvas(), cvc.getTuris());

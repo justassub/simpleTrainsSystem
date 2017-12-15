@@ -31,7 +31,7 @@ ReactDOM.render((
               <Route exact path="/:id/vagonai/add/bazinis" component={BazinisKlase} />
               <Route exact path="/:id/vagonai/add/bazinis/1" component={klase1} />
               <Route exact path="/:id/vagonai/add/bazinis/2" component={klase2} />
-              <Route exact path="/:id/vagonai/add/bazinis/2" component={klase3} />
+              <Route exact path="/:id/vagonai/add/bazinis/3" component={klase3} />
               <Route exact path="/:id/vagonai/add/lokomotyvas" component={LokomotyvoPaskirtis}/>
               <Route exact path="/:id/vagonai/add/lokomotyvas/traukiantis" component={Traukiantis}/>
               <Route exact path="/:id/vagonai/add/lokomotyvas/stumiantis" component={stumiantis}/>

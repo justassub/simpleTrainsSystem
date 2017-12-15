@@ -32,7 +32,7 @@ export class klase2 extends React.Component{
             turis: this.state.turis          
     };
     
-    axios.post("http://localhost:8081/train-app/vagonai/add/bazinis/2", outputTrain)
+    axios.post("http://localhost:8081/train-app/vagonai/"+this.props.match.params.id+"/add/bazinis/2", outputTrain)
         .then((response) => {
             this.setState( {
                 gamintojas: '',

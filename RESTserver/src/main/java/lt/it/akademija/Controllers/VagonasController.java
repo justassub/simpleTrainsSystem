@@ -20,23 +20,26 @@ public class VagonasController {
         this.vagonasServices=vagonasServices;
     }
 
-    @RequestMapping(path = "/add/bazinis/{klase}",method = RequestMethod.POST)
+    @RequestMapping(path = "/{id}/add/bazinis/{klase}",method = RequestMethod.POST)
     @ApiOperation(value = "Add bazinis vagonas ",notes = "Doest return anything , justs adds")
-    public  void createBazinis (@PathVariable int klase,@RequestBody CreateVagonasCommand cvc){
-        vagonasServices.addBazinisVagonas(klase,cvc);
+    public  void createBazinis (@PathVariable Long id,@PathVariable int klase,@RequestBody CreateVagonasCommand cvc){
+        System.out.println(id);
+        vagonasServices.addBazinisVagonas(id,klase,cvc);
 
     }
 
-    @RequestMapping(path = "/add/krovininis",method = RequestMethod.POST)
+    @RequestMapping(path = "/{id}/add/krovininis",method = RequestMethod.POST)
     @ApiOperation(value = "Add krovininis vagonas for specialTrain",notes = "Doest return anything , justs adds")
-    public  void createKrovininis (@RequestBody CreateVagonasCommand cvc){
-        vagonasServices.addKrovininisVagonas(cvc);
+    public  void createKrovininis (@PathVariable Long id,@RequestBody CreateVagonasCommand cvc){
+        System.out.println(id);
+        vagonasServices.addKrovininisVagonas(id,cvc);
 
     }
-    @RequestMapping(path = "/add/lokomotyvas/{paskirtis}",method = RequestMethod.POST)
+    @RequestMapping(path = "/{id}/add/lokomotyvas/{paskirtis}",method = RequestMethod.POST)
     @ApiOperation(value = "Add vagonas for specialTrain",notes = "Doest return anything , justs adds")
-    public  void createKrovininis (@PathVariable String paskirtis,@RequestBody CreateVagonasCommand cvc){
-       vagonasServices.addLokomotyvas(paskirtis,cvc);
+    public  void createKrovininis (@PathVariable Long id,@PathVariable String paskirtis,@RequestBody CreateVagonasCommand cvc){
+        System.out.println(id);
+       vagonasServices.addLokomotyvas(id,paskirtis,cvc);
 
     }
 
