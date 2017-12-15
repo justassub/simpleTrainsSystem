@@ -16,6 +16,8 @@ import { LokomotyvoPaskirtis } from './Vagonai/LokomotyvoPaskirtis';
 import { Traukiantis } from './Vagonai/PridetiLokomotyva/Traukiantis';
 import { stumiantis } from './Vagonai/PridetiLokomotyva/stumiantis';
 import { krovininis } from './Vagonai/pridetiKrovininiVagona/krovininis';
+import { VagonuContainer } from './VagonuInformacija/VagonuContainer';
+import { TrainAddComponent } from './AddTrain/TrainAddComponent';
 
 ReactDOM.render((
 
@@ -23,6 +25,7 @@ ReactDOM.render((
           <div className="container">
               <NavigationComponent />
               <Switch>
+              <Route exact path="/" component={TrainListContainer} />
               <Route exact path="/trains" component={TrainListContainer} />
               <Route exact path="/trains/:id" component={SingleTrainContainer} />
               <Route exact path="/addtrain" component={TrainAddContainer} />
@@ -36,6 +39,7 @@ ReactDOM.render((
               <Route exact path="/:id/vagonai/add/lokomotyvas/traukiantis" component={Traukiantis}/>
               <Route exact path="/:id/vagonai/add/lokomotyvas/stumiantis" component={stumiantis}/>
               <Route exact path="/:id/vagonai/add/krovininis" component={krovininis}/>
+              <Route exact path="/trains/:id/vagonai" component={VagonuContainer}/>
               </Switch>
           </div>
       </BrowserRouter> ),

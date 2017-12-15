@@ -28,7 +28,7 @@ export var TrainAddComponent =(props)=>{
                 <p>City</p>
                 <div>
                 <input type="text" className="form-control" id="city" placeholder="City" value={props.city}
-                           />
+                         onChange={props.onChange}   />
                 </div>
             </div>
 

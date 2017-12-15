@@ -22,10 +22,11 @@ public class TrainServices {
 
     @Transactional
     public List<Train>  getTrains(){
+        List<Train> newList=new ArrayList<>();
         if (sumTrains()>=5){
             return trainRepository.findAll();
         }
-        return null;
+        return newList;
     }
 
     @Transactional

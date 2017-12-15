@@ -18,7 +18,8 @@ render(){
     
     return (
        <div className="col-xs-12 col-sm-4 text-center">       
-                    <div className="thumbnail">                
+                    <div className="thumbnail">  
+                    <img src={"https://pbs.twimg.com/profile_images/720089998364512256/aGIADsG7.jpg"}/>              
                     <h2>{this.props.id}</h2>
                     <h3>{this.props.city}</h3>  
                     <h2>{this.props.enterprise}</h2>                                       

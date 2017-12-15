@@ -1,8 +1,13 @@
 package lt.it.akademija.Trains;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lt.it.akademija.Vagonai.Vagonas;
+
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
+
 public class Train {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,7 +24,23 @@ public class Train {
     public  Train(){
 
     }
+    @OneToMany(mappedBy = "train")
+    @JsonIgnore
+    private List<Vagonas> vagonai;
 
+    public void addVagonas(Vagonas vagonas){
+
+        this.vagonai.add(vagonas);
+        vagonas.setTrain(this);
+    }
+
+    public List<Vagonas> getVagonai() {
+        return vagonai;
+    }
+
+    public void setVagonai(List<Vagonas> vagonai) {
+        this.vagonai = vagonai;
+    }
 
     public Train(int years, String enterprise, String city) {
         this.years = years;

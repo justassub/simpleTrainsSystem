@@ -1,8 +1,13 @@
 package lt.it.akademija.Vagonai;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import lt.it.akademija.Trains.Train;
+
 import javax.persistence.*;
+import javax.validation.constraints.Max;
 
 @Entity
+
 public class Vagonas {
 //VISIEMS TRAUKINIAMS
     @Id
@@ -16,6 +21,7 @@ public class Vagonas {
     @Column
     int kiekis;
     @Column
+     @Max(1000000)
      double kaina;
     @Column
     double turis;
@@ -28,6 +34,18 @@ public class Vagonas {
     String lokomotyvas;//traukia or stumia
     @Column
     double galia;
+
+    @ManyToOne
+    @JoinColumn(name="train_id")
+    private Train train;
+
+    public Train getTrain() {
+        return train;
+    }
+
+    public void setTrain(Train train) {
+        this.train = train;
+    }
 
     public Vagonas(){
 
