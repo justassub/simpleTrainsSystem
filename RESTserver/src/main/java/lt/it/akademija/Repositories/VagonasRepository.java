@@ -15,5 +15,7 @@ public interface VagonasRepository extends JpaRepository<Vagonas,Long> {
 //    @Query("select SUM (kiekis*kaina) from vagonas where train_id=?1")
 //    double trainPrice(long id);
 
+    void deleteAllByTrain(Long id);
+
 
 }

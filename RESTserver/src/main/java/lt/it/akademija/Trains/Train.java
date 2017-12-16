@@ -24,8 +24,9 @@ public class Train {
     public  Train(){
 
     }
-    @OneToMany(mappedBy = "train")
+    @OneToMany(mappedBy = "train",cascade = CascadeType.REMOVE)
     @JsonIgnore
+
     private List<Vagonas> vagonai;
 
     public void addVagonas(Vagonas vagonas){

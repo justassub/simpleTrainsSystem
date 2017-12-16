@@ -29,8 +29,6 @@ public class TrainController {
 
     }
 
-
-
     @RequestMapping(path = "/{id}",method = RequestMethod.GET)
     @ApiOperation(value = "Get ONE train", notes = "Returs ONE  train as List")
     public List<Train> getOneProducts(@PathVariable Long id) {
@@ -46,17 +44,28 @@ public class TrainController {
 
     }
 
+    @RequestMapping(path = "/edit/{id}",method = RequestMethod.PUT)
+    @ApiOperation(value = "Edits train",notes="Just edits train ")
+    public  void editTrain(@PathVariable Long id , @RequestBody CreateTrainCommand ctc){
+        trainServices.editTrain(id,ctc);
+    }
+
+    @RequestMapping(path = "/findByCity/{city}",method = RequestMethod.GET)
+    @ApiOperation(value = "find tray by city", notes = "find city")
+    public List<Train> trainListByCity( @PathVariable String city){
+      return   trainServices.findListByCity(city);
+    }
+    @RequestMapping(path="/findByYear/{year1}/{year2}",method = RequestMethod.GET)
+    public  List<Train> trainListBetweenYears(@PathVariable int year1,@PathVariable int year2){
+        return trainServices.findListBetweenYears(year1,year2);
+    }
     @RequestMapping(path = "/remove/{id}",method = RequestMethod.DELETE)
     @ApiOperation(value = "removes train",notes = "removes train by train ID")
     public  void removeTrain(@PathVariable Long id){
         trainServices.removeTrain(id);
     }
 
-    @RequestMapping(path = "/edit/{id}",method = RequestMethod.PUT)
-    @ApiOperation(value = "Edits train",notes="Just edits train ")
-    public  void editTrain(@PathVariable Long id , @RequestBody CreateTrainCommand ctc){
-        trainServices.editTrain(id,ctc);
-    }
+
 
 
 

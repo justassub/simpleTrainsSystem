@@ -1,8 +1,10 @@
 package lt.it.akademija.Services;
 
 import lt.it.akademija.Repositories.TrainRepository;
+import lt.it.akademija.Repositories.VagonasRepository;
 import lt.it.akademija.Trains.CreateTrainCommand;
 import lt.it.akademija.Trains.Train;
+import lt.it.akademija.Vagonai.Vagonas;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +19,9 @@ public class TrainServices {
 
     @Autowired
     TrainRepository trainRepository;
+
+    @Autowired
+    VagonasRepository vagonasRepository;
 
 
 
@@ -65,6 +70,14 @@ public class TrainServices {
 
         trainRepository.save(trainToEdit);
 
+    }
+    @Transactional
+    public List<Train> findListByCity (String city){
+      return   trainRepository.findAllByCity(city);
+    }
+    @Transactional
+    public List<Train> findListBetweenYears(int year1,int year2){
+        return trainRepository.findAllByYearsBetween(year1,year2);
     }
 
 }

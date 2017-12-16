@@ -11,4 +11,8 @@ public interface TrainRepository  extends JpaRepository<Train,Long>{
     List<Train> findAll();
     Train save(Train train);
 
+    List<Train> findAllByCity(String city);
+    List<Train> findAllByYearsBetween(int year1,int year2);
+
+
 }

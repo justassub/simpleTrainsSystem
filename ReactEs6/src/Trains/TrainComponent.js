@@ -2,10 +2,12 @@ import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import {NavLink} from 'react-router-dom';
 import axios from 'axios';
+import {styles} from '../styles';
 
 const colorStyle={
-    color:'red'
-}
+    color:styles.color
+};
+   
 
 
 export class TrainComponent extends React.Component  {    
